@@ -1,5 +1,5 @@
 /* ROBOT.GIF from Giphy - https://giphy.com/gifs/robot-cinema-4d-eyedesyn-3o7abtn7DuREEpsyWY */
-
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap");
 html {
   box-sizing: border-box;
 }
@@ -7,6 +7,7 @@ html {
 body {
   margin: 0;
   background-color: #45badd;
+  font-family: "Lato", sans-serif;
 }
 
 .container {
@@ -49,6 +50,30 @@ button:disabled {
   cursor: default;
 }
 
+.jokeBox {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  overflow: auto;
+}
+
+.joke {
+  width: 60%;
+  margin: 0 auto;
+  font-size: 22px;
+  line-break: strict;
+  text-align: center;
+}
+
+.text-sm {
+  font-size: 16px;
+}
+
 /* Media Query: Tablet or Smaller */
 @media screen and (max-width: 1000px) {
   .container {
@@ -58,5 +83,9 @@ button:disabled {
 
   button {
     box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .joke {
+    font-size: 16px;
   }
 }
